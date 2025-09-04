@@ -1,0 +1,30 @@
+# Test Configuration for Gateway Service
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: test-route
+          uri: http://localhost:8080
+          predicates:
+            - Path=/test/**
+
+# JWT Configuration for Testing
+jwt:
+  secret: testSecretKeyForJWTTokenGenerationInTestEnvironment
+  expiration: 3600000
+
+# Logging Configuration
+logging:
+  level:
+    com.safalifter: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+
+# Eureka Configuration for Testing
+eureka:
+  client:
+    enabled: false
