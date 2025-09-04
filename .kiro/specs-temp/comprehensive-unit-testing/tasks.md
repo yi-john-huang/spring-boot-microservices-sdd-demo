@@ -2,7 +2,7 @@
 
 ## Foundation Tasks
 
-- [ ] 1. Setup Testing Infrastructure
+- [x] 1. Setup Testing Infrastructure
   - Add JUnit 5, Mockito, Spring Boot Test dependencies to all service pom.xml files
   - Configure TestContainers for PostgreSQL integration tests
   - Setup WireMock for Feign client testing
